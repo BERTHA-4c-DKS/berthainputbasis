@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
             for line in fh:
                 line = line.replace("\n", "")
-                line = line.replace(" ", "")
+                line = ' '.join(line.split())
                 values.append(line)
             tojson["Values"].append(values)
         else:

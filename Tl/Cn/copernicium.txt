@@ -1,4 +1,0 @@
-112
-Per il set di fitting:
-sono stati aggiunti due esponenti (funzioni localizzate sul nucleo) e con parte angolare l=0 per un 
-totale di 26 esponenti
