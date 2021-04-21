@@ -24,6 +24,22 @@ python3 txttojson.py -f ./Cl/fitt/a1.txt -t  --atomname "Cl" --basisname "a1" --
 python3 txttojson.py -f ./Cl/fitt/a2.txt -t  --atomname "Cl" --basisname "a2" --outfilename Cl4.json
 
 
+echo "Cn"
+python3 txttojson.py -f ./Cn/basis/dyall_vtz.txt --atomname "Cn" --basisname "dyall_vtz.txt" --outfilename Cn1.json
+python3 txttojson.py -f ./Cn/fitt/cn_old.abs -t  --atomname "Cn" --basisname "cn_old.abs" --outfilename Cn3.json
+python3 txttojson.py -f ./Cn/fitt/cn.abs -t  --atomname "Cn" --basisname "cn.abs" --outfilename Cn4.json
+
+
+echo "Cu"
+python3 txttojson.py -f ./Cu/basis/aug-cc-pVDZ-DK.txt --atomname "Cu" --basisname "aug-cc-pVDZ-DK" --outfilename Cu1.json
+python3 txttojson.py -f ./Cu/basis/aug-cc-pVQZ-DK.txt --atomname "Cu" --basisname "aug-cc-pVQZ-DK" --outfilename Cu2.json
+python3 txttojson.py -f ./Cu/basis/aug-cc-pVTZ-DK.txt --atomname "Cu" --basisname "aug-cc-pVTZ-DK" --outfilename Cu3.json
+python3 txttojson.py -f ./Cu/fitt/a1.txt -t  --atomname "Cu" --basisname "a1" --outfilename Cu4.json
+
+
+echo "F"
+python3 txttojson.py -f ./F/fitt/a1.txt -t  --atomname "F" --basisname "a1" --outfilename F2.json
+
 
 
 
