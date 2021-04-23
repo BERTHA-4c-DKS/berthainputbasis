@@ -1,9 +1,9 @@
 {
     "BasisFittSetBertha": [
         {
-            "C/aug-cc-pVQZ-DK.txt/basisset": {
+            "C/aug-cc-pVQZ-DK/basisset": {
                 "Atomname": "C",
-                "Basisname": "aug-cc-pVQZ-DK.txt",
+                "Basisname": "aug-cc-pVQZ-DK",
                 "Basistype": "basisset",
                 "Dim": 4,
                 "Header": [
@@ -57,9 +57,9 @@
             }
         },
         {
-            "Cl/aug-cc-pVTZ-DK.txt/basisset": {
+            "Cl/aug-cc-pVTZ-DK/basisset": {
                 "Atomname": "Cl",
-                "Basisname": "aug-cc-pVTZ-DK.txt",
+                "Basisname": "aug-cc-pVTZ-DK",
                 "Basistype": "basisset",
                 "Dim": 3,
                 "Header": [
@@ -112,9 +112,9 @@
             }
         },
         {
-            "Cn/cn_old.txt/fittset": {
+            "Cn/cn_old/fittset": {
                 "Atomname": "Cn",
-                "Basisname": "cn_old.txt",
+                "Basisname": "cn_old",
                 "Basistype": "fittset",
                 "Dim": 24,
                 "Values": [
@@ -148,9 +148,9 @@
             }
         },
         {
-            "Cl/basis.txt/basisset": {
+            "Cl/basis/basisset": {
                 "Atomname": "Cl",
-                "Basisname": "basis.txt",
+                "Basisname": "basis",
                 "Basistype": "basisset",
                 "Dim": 4,
                 "Header": [
@@ -256,9 +256,9 @@
             }
         },
         {
-            "Cn/cn.txt/fittset": {
+            "Cn/cn/fittset": {
                 "Atomname": "Cn",
-                "Basisname": "cn.txt",
+                "Basisname": "cn",
                 "Basistype": "fittset",
                 "Dim": 26,
                 "Values": [
@@ -294,9 +294,9 @@
             }
         },
         {
-            "Ag/dyall_vdz.txt/basisset": {
+            "Ag/dyall_vdz/basisset": {
                 "Atomname": "Ag",
-                "Basisname": "dyall_vdz.txt",
+                "Basisname": "dyall_vdz",
                 "Basistype": "basisset",
                 "Dim": 3,
                 "Header": [
@@ -366,9 +366,9 @@
             }
         },
         {
-            "Og/dyall_vtz.txt/basisset": {
+            "Og/dyall_vtz/basisset": {
                 "Atomname": "Og",
-                "Basisname": "dyall_vtz.txt",
+                "Basisname": "dyall_vtz",
                 "Basistype": "basisset",
                 "Dim": 5,
                 "Header": [
@@ -500,9 +500,9 @@
             }
         },
         {
-            "Fl/fl.txt/fittset": {
+            "Fl/fl/fittset": {
                 "Atomname": "Fl",
-                "Basisname": "fl.txt",
+                "Basisname": "fl",
                 "Basistype": "fittset",
                 "Dim": 27,
                 "Values": [
@@ -539,9 +539,9 @@
             }
         },
         {
-            "Hg/dyall_vtz.txt/basisset": {
+            "Hg/dyall_vtz/basisset": {
                 "Atomname": "Hg",
-                "Basisname": "dyall_vtz.txt",
+                "Basisname": "dyall_vtz",
                 "Basistype": "basisset",
                 "Dim": 5,
                 "Header": [
@@ -655,9 +655,9 @@
             }
         },
         {
-            "Ag/dyall_vqz.txt/basisset": {
+            "Ag/dyall_vqz/basisset": {
                 "Atomname": "Ag",
-                "Basisname": "dyall_vqz.txt",
+                "Basisname": "dyall_vqz",
                 "Basistype": "basisset",
                 "Dim": 5,
                 "Header": [
@@ -782,9 +782,9 @@
             }
         },
         {
-            "H/fit.txt/fittset": {
+            "H/fit/fittset": {
                 "Atomname": "H",
-                "Basisname": "fit.txt",
+                "Basisname": "fit",
                 "Basistype": "fittset",
                 "Dim": 5,
                 "Values": [
@@ -799,9 +799,9 @@
             }
         },
         {
-            "N/aug-cc-VQZ-DK.txt/basisset": {
+            "N/aug-cc-VQZ-DK/basisset": {
                 "Atomname": "N",
-                "Basisname": "aug-cc-VQZ-DK.txt",
+                "Basisname": "aug-cc-VQZ-DK",
                 "Basistype": "basisset",
                 "Dim": 4,
                 "Header": [
@@ -855,9 +855,9 @@
             }
         },
         {
-            "Ag/a1.txt/fittset": {
+            "Ag/a1/fittset": {
                 "Atomname": "Ag",
-                "Basisname": "a1.txt",
+                "Basisname": "a1",
                 "Basistype": "fittset",
                 "Dim": 10,
                 "Values": [
@@ -877,9 +877,9 @@
             }
         },
         {
-            "H/basis.txt/basisset": {
+            "H/basis/basisset": {
                 "Atomname": "H",
-                "Basisname": "basis.txt",
+                "Basisname": "basis",
                 "Basistype": "basisset",
                 "Dim": 1,
                 "Header": [
@@ -900,9 +900,9 @@
             }
         },
         {
-            "Ag/dyall_vtz.txt/basisset": {
+            "Ag/dyall_vtz/basisset": {
                 "Atomname": "Ag",
-                "Basisname": "dyall_vtz.txt",
+                "Basisname": "dyall_vtz",
                 "Basistype": "basisset",
                 "Dim": 4,
                 "Header": [
@@ -998,9 +998,9 @@
             }
         },
         {
-            "Rn/dyall_vtz.txt/basisset": {
+            "Rn/dyall_vtz/basisset": {
                 "Atomname": "Rn",
-                "Basisname": "dyall_vtz.txt",
+                "Basisname": "dyall_vtz",
                 "Basistype": "basisset",
                 "Dim": 5,
                 "Header": [
@@ -1121,9 +1121,9 @@
             }
         },
         {
-            "Fl/dyall_vdz.txt/basisset": {
+            "Fl/dyall_vdz/basisset": {
                 "Atomname": "Fl",
-                "Basisname": "dyall_vdz.txt",
+                "Basisname": "dyall_vdz",
                 "Basistype": "basisset",
                 "Dim": 4,
                 "Header": [
@@ -1230,9 +1230,9 @@
             }
         },
         {
-            "Au/dyall_vqz.txt/basisset": {
+            "Au/dyall_vqz/basisset": {
                 "Atomname": "Au",
-                "Basisname": "dyall_vqz.txt",
+                "Basisname": "dyall_vqz",
                 "Basistype": "basisset",
                 "Dim": 5,
                 "Header": [
@@ -1371,9 +1371,9 @@
             }
         },
         {
-            "Pb/pb.txt/fittset": {
+            "Pb/pb/fittset": {
                 "Atomname": "Pb",
-                "Basisname": "pb.txt",
+                "Basisname": "pb",
                 "Basistype": "fittset",
                 "Dim": 25,
                 "Values": [
@@ -1408,9 +1408,9 @@
             }
         },
         {
-            "Fl/fl_old.txt/fittset": {
+            "Fl/fl_old/fittset": {
                 "Atomname": "Fl",
-                "Basisname": "fl_old.txt",
+                "Basisname": "fl_old",
                 "Basistype": "fittset",
                 "Dim": 24,
                 "Values": [
@@ -1444,9 +1444,9 @@
             }
         },
         {
-            "Cn/dyall_vtz.txt/basisset": {
+            "Cn/dyall_vtz/basisset": {
                 "Atomname": "Cn",
-                "Basisname": "dyall_vtz.txt",
+                "Basisname": "dyall_vtz",
                 "Basistype": "basisset",
                 "Dim": 5,
                 "Header": [
@@ -1578,9 +1578,9 @@
             }
         },
         {
-            "N/aug-cc-pVDZ-DK.txt/basisset": {
+            "N/aug-cc-pVDZ-DK/basisset": {
                 "Atomname": "N",
-                "Basisname": "aug-cc-pVDZ-DK.txt",
+                "Basisname": "aug-cc-pVDZ-DK",
                 "Basistype": "basisset",
                 "Dim": 2,
                 "Header": [
@@ -1616,9 +1616,9 @@
             }
         },
         {
-            "Pb/dyall_vtz.txt/basisset": {
+            "Pb/dyall_vtz/basisset": {
                 "Atomname": "Pb",
-                "Basisname": "dyall_vtz.txt",
+                "Basisname": "dyall_vtz",
                 "Basistype": "basisset",
                 "Dim": 5,
                 "Header": [
@@ -1739,9 +1739,9 @@
             }
         },
         {
-            "Nh/nh.txt/fittset": {
+            "Nh/nh/fittset": {
                 "Atomname": "Nh",
-                "Basisname": "nh.txt",
+                "Basisname": "nh",
                 "Basistype": "fittset",
                 "Dim": 24,
                 "Values": [
@@ -1775,9 +1775,9 @@
             }
         },
         {
-            "C/a1.txt/fittset": {
+            "C/a1/fittset": {
                 "Atomname": "C",
-                "Basisname": "a1.txt",
+                "Basisname": "a1",
                 "Basistype": "fittset",
                 "Dim": 8,
                 "Values": [
@@ -1795,9 +1795,9 @@
             }
         },
         {
-            "N/aug-cc-pVTZ-DK.txt/basisset": {
+            "N/aug-cc-pVTZ-DK/basisset": {
                 "Atomname": "N",
-                "Basisname": "aug-cc-pVTZ-DK.txt",
+                "Basisname": "aug-cc-pVTZ-DK",
                 "Basistype": "basisset",
                 "Dim": 3,
                 "Header": [
@@ -1841,9 +1841,9 @@
             }
         },
         {
-            "Cl/a1.txt/fittset": {
+            "Cl/a1/fittset": {
                 "Atomname": "Cl",
-                "Basisname": "a1.txt",
+                "Basisname": "a1",
                 "Basistype": "fittset",
                 "Dim": 9,
                 "Values": [
@@ -1862,9 +1862,9 @@
             }
         },
         {
-            "Au/b16.txt/fittset": {
+            "Au/b16/fittset": {
                 "Atomname": "Au",
-                "Basisname": "b16.txt",
+                "Basisname": "b16",
                 "Basistype": "fittset",
                 "Dim": 16,
                 "Values": [
@@ -1890,9 +1890,9 @@
             }
         },
         {
-            "Cu/aug-cc-VQZ-DK.txt/basisset": {
+            "Cu/aug-cc-VQZ-DK/basisset": {
                 "Atomname": "Cu",
-                "Basisname": "aug-cc-VQZ-DK.txt",
+                "Basisname": "aug-cc-VQZ-DK",
                 "Basistype": "basisset",
                 "Dim": 5,
                 "Header": [
@@ -1983,9 +1983,9 @@
             }
         },
         {
-            "Rn/rn.txt/fittset": {
+            "Rn/rn/fittset": {
                 "Atomname": "Rn",
-                "Basisname": "rn.txt",
+                "Basisname": "rn",
                 "Basistype": "fittset",
                 "Dim": 25,
                 "Values": [
@@ -2020,9 +2020,9 @@
             }
         },
         {
-            "C/aug-cc-pVTZ-DK.txt/basisset": {
+            "C/aug-cc-pVTZ-DK/basisset": {
                 "Atomname": "C",
-                "Basisname": "aug-cc-pVTZ-DK.txt",
+                "Basisname": "aug-cc-pVTZ-DK",
                 "Basistype": "basisset",
                 "Dim": 3,
                 "Header": [
@@ -2066,9 +2066,9 @@
             }
         },
         {
-            "Og/og.txt/fittset": {
+            "Og/og/fittset": {
                 "Atomname": "Og",
-                "Basisname": "og.txt",
+                "Basisname": "og",
                 "Basistype": "fittset",
                 "Dim": 27,
                 "Values": [
@@ -2105,9 +2105,9 @@
             }
         },
         {
-            "Au/b20.txt/fittset": {
+            "Au/b20/fittset": {
                 "Atomname": "Au",
-                "Basisname": "b20.txt",
+                "Basisname": "b20",
                 "Basistype": "fittset",
                 "Dim": 20,
                 "Values": [
@@ -2137,9 +2137,9 @@
             }
         },
         {
-            "Cu/a1.txt/fittset": {
+            "Cu/a1/fittset": {
                 "Atomname": "Cu",
-                "Basisname": "a1.txt",
+                "Basisname": "a1",
                 "Basistype": "fittset",
                 "Dim": 10,
                 "Values": [
@@ -2159,9 +2159,9 @@
             }
         },
         {
-            "Cu/aug-cc-pVDZ-DK.txt/basisset": {
+            "Cu/aug-cc-pVDZ-DK/basisset": {
                 "Atomname": "Cu",
-                "Basisname": "aug-cc-pVDZ-DK.txt",
+                "Basisname": "aug-cc-pVDZ-DK",
                 "Basistype": "basisset",
                 "Dim": 3,
                 "Header": [
@@ -2233,9 +2233,9 @@
             }
         },
         {
-            "Fl/dyall_vtz.txt/basisset": {
+            "Fl/dyall_vtz/basisset": {
                 "Atomname": "Fl",
-                "Basisname": "dyall_vtz.txt",
+                "Basisname": "dyall_vtz",
                 "Basistype": "basisset",
                 "Dim": 5,
                 "Header": [
@@ -2367,9 +2367,9 @@
             }
         },
         {
-            "C/aug-cc-pVDZ-DK.txt/basisset": {
+            "C/aug-cc-pVDZ-DK/basisset": {
                 "Atomname": "C",
-                "Basisname": "aug-cc-pVDZ-DK.txt",
+                "Basisname": "aug-cc-pVDZ-DK",
                 "Basistype": "basisset",
                 "Dim": 2,
                 "Header": [
@@ -2405,9 +2405,9 @@
             }
         },
         {
-            "Au/dyall_vdz.txt/basisset": {
+            "Au/dyall_vdz/basisset": {
                 "Atomname": "Au",
-                "Basisname": "dyall_vdz.txt",
+                "Basisname": "dyall_vdz",
                 "Basistype": "basisset",
                 "Dim": 4,
                 "Header": [
@@ -2497,9 +2497,9 @@
             }
         },
         {
-            "N/a1.txt/fittset": {
+            "N/a1/fittset": {
                 "Atomname": "N",
-                "Basisname": "a1.txt",
+                "Basisname": "a1",
                 "Basistype": "fittset",
                 "Dim": 8,
                 "Values": [
@@ -2517,9 +2517,9 @@
             }
         },
         {
-            "Nh/dyall_vtz.txt/basisset": {
+            "Nh/dyall_vtz/basisset": {
                 "Atomname": "Nh",
-                "Basisname": "dyall_vtz.txt",
+                "Basisname": "dyall_vtz",
                 "Basistype": "basisset",
                 "Dim": 5,
                 "Header": [
@@ -2651,9 +2651,9 @@
             }
         },
         {
-            "Au/dyall_vtz.txt/basisset": {
+            "Au/dyall_vtz/basisset": {
                 "Atomname": "Au",
-                "Basisname": "dyall_vtz.txt",
+                "Basisname": "dyall_vtz",
                 "Basistype": "basisset",
                 "Dim": 5,
                 "Header": [
@@ -2767,9 +2767,9 @@
             }
         },
         {
-            "Cl/a2.txt/fittset": {
+            "Cl/a2/fittset": {
                 "Atomname": "Cl",
-                "Basisname": "a2.txt",
+                "Basisname": "a2",
                 "Basistype": "fittset",
                 "Dim": 9,
                 "Values": [
@@ -2788,9 +2788,9 @@
             }
         },
         {
-            "Hg/hg.txt/fittset": {
+            "Hg/hg/fittset": {
                 "Atomname": "Hg",
-                "Basisname": "hg.txt",
+                "Basisname": "hg",
                 "Basistype": "fittset",
                 "Dim": 24,
                 "Values": [
@@ -2824,9 +2824,9 @@
             }
         },
         {
-            "Cu/aug-cc-pVTZ-DK.txt/basisset": {
+            "Cu/aug-cc-pVTZ-DK/basisset": {
                 "Atomname": "Cu",
-                "Basisname": "aug-cc-pVTZ-DK.txt",
+                "Basisname": "aug-cc-pVTZ-DK",
                 "Basistype": "basisset",
                 "Dim": 4,
                 "Header": [
@@ -2903,9 +2903,9 @@
             }
         },
         {
-            "F/a1.txt/fittset": {
+            "F/a1/fittset": {
                 "Atomname": "F",
-                "Basisname": "a1.txt",
+                "Basisname": "a1",
                 "Basistype": "fittset",
                 "Dim": 8,
                 "Values": [

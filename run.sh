@@ -5,13 +5,15 @@ do
   echo $atom
   for b in $(ls ./"$atom"/basis)
   do
-    python3 txttojson.py -f ./"$atom"/basis/"$b" --atomname "$atom" --basisname "$b" --outfilename "$atom"_"$i".json
+    name=$(echo "$b" | cut -f 1 -d '.')
+    python3 txttojson.py -f ./"$atom"/basis/"$b" --atomname "$atom" --basisname "$name" --outfilename "$atom"_"$i".json
     i=$((i+1))
   done
 
   for b in $(ls ./"$atom"/fitt)
   do
-    python3 txttojson.py -f ./"$atom"/fitt/"$b" -t --atomname "$atom" --basisname "$b" --outfilename "$atom"_"$i".json
+    name=$(echo "$b" | cut -f 1 -d '.')
+    python3 txttojson.py -f ./"$atom"/fitt/"$b" -t --atomname "$atom" --basisname "$name" --outfilename "$atom"_"$i".json
     i=$((i+1))
   done
 
