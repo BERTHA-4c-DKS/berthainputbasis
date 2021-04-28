@@ -54,16 +54,16 @@ if __name__ == "__main__":
                 line = fh.readline()
                 sline = line.split()
 
-                if len(sline) != 3:
+                if len(sline) != 1 and len(sline) != 3:
                     print("Error in file format")
                     exit(1)
 
                 sdim = int(sline[0])
-                sval1 = int(sline[1])
-                sval2 = int(sline[2])
+                #sval1 = int(sline[1])
+                #sval2 = int(sline[2])
                 
                 line = line.replace("\n", "")
-                tojson["Header"].append(line)
+                tojson["Header"].append(str(sdim))
 
                 values = []
                 for j in range(sdim):
