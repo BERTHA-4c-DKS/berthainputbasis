@@ -1,6 +1,6 @@
 export i=0
 
-for atom in Ag Au C Cl Cn Cu F Fl H Hg N Nh Og Pb Pt Rn Tl
+for atom in Ag Au C Cl Cn Cu F Fl H Hg N Nh Og Pb Pt Rn Tl O
 do
   echo $atom
   for b in $(ls ./"$atom"/basis)
