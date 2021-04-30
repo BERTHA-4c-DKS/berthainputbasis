@@ -25,25 +25,45 @@ if __name__ == "__main__":
     tojson["Atomname"] = args.atomname
     tojson["Basisname"] = args.basisname
 
+    comments = []
+    alllines = []
     with open(args.inputfile) as fh:
+        for l in fh:
+            idx = l.find("#")
+            line = []
+            if idx >= 0:
+                comments.append(l[idx+1:].replace("\n", ""))
+                line = l[:idx]
+            else:
+                line = l
+
+            line = line.replace("\n", "")
+            line = ' '.join(line.split())
+
+            if line != "":
+                alllines.append(line)
+
+    tojson["Comments"] = comments
+
+    if len(alllines) > 0:
         if args.fittfile:
             tojson["Basistype"] = "fittset"
-            firstline = fh.readline()
+            firstline = alllines[0]
             dim = int(firstline)
             tojson["Dim"] = dim
             values = []
 
             tojson["Values"] = []
 
-            for line in fh:
-                line = line.replace("\n", "")
-                line = ' '.join(line.split())
+            for line in alllines[1:]:
                 values.append(line)
             tojson["Values"].append(values)
         else:
+            counter = 0
             tojson["Basistype"] = "basisset"
 
-            firstline = fh.readline()
+            firstline = alllines[counter]
+            counter += 1
             dim = int(firstline)
 
             tojson["Dim"] = dim
@@ -51,7 +71,8 @@ if __name__ == "__main__":
             tojson["Values"] = []
 
             for i in range(0,dim+1):
-                line = fh.readline()
+                line = alllines[counter]
+                counter += 1
                 sline = line.split()
 
                 if len(sline) != 1 and len(sline) != 3:
@@ -67,9 +88,8 @@ if __name__ == "__main__":
 
                 values = []
                 for j in range(sdim):
-                    line = fh.readline()
-                    line = line.replace("\n", "")
-                    line = line.replace(" ", "")
+                    line = alllines[counter]
+                    counter += 1
                     values.append(line)
                 tojson["Values"].append(values)
 
