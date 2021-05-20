@@ -474,9 +474,9 @@
             }
         },
         {
-            "H/vdz/basisset": {
+            "H/avdz/basisset": {
                 "Atomname": "H",
-                "Basisname": "vdz",
+                "Basisname": "avdz",
                 "Comments": [],
                 "Basistype": "basisset",
                 "Dim": 1,
@@ -972,9 +972,9 @@
             }
         },
         {
-            "O/vdz/basisset": {
+            "O/avdz/basisset": {
                 "Atomname": "O",
-                "Basisname": "vdz",
+                "Basisname": "avdz",
                 "Comments": [],
                 "Basistype": "basisset",
                 "Dim": 2,
