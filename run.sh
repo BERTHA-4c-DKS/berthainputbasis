@@ -1,3 +1,5 @@
+rm fullsets.json 
+
 export i=0
 
 for atom in Ag Au C Cl Cn Cu F Fl H Hg N Nh Og Pb Pt Rn Tl O
@@ -18,3 +20,25 @@ do
   done
 
 done
+
+python3 mergejsons.py
+
+export i=0
+
+for atom in Ag Au C Cl Cn Cu F Fl H Hg N Nh Og Pb Pt Rn Tl O
+do
+  for b in $(ls ./"$atom"/basis)
+  do
+    rm -f "$atom"_"$i".json
+    i=$((i+1))
+  done
+
+  for b in $(ls ./"$atom"/fitt)
+  do
+    rm -f "$atom"_"$i".json
+    i=$((i+1))
+  done
+
+done
+
+mv merged_file.json fullsets.json 
