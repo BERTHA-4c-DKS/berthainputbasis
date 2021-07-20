@@ -1,0 +1,14 @@
+8
+   2066.00000000   2           
+    459.00000000   2           
+    131.00000000   2           
+     37.50000000   2           
+     13.80000000   4      
+      3.06000000   4   
+      0.88000000   4   
+      0.25000000   4   
+# Extracted from: Basis Set Exchange
+# Basis set: dgauss-a2-dftjfit
+# Modifications: the angular momentum was upshifted by 2 units
+
+
