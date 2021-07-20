@@ -24,5 +24,5 @@
 2    0    0
 2.45212555E+00
 6.03155407E-01
-#K.G. Dyall, Theor. Chem. Acc. (1998) 99:366;
-#revision K.G. Dyall, Theor. Chem. Acc. (2006) 115:441
+#Basis set extracted from:
+#K.G. Dyall, Theor. Chem. Acc. (2016) 135:128
