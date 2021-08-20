@@ -1,0 +1,7 @@
+4
+      1.50000000E+00     2
+      0.45000000E+02     0
+      0.75000000E+01     0
+      0.30000000E+00     0
+# Extracted from: Basis Set Exchange
+# Basis set: dgauss-a2-dftjfit alias aux3
