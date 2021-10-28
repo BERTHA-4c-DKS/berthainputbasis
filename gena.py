@@ -12,6 +12,12 @@ Generate spd
 parser = argparse.ArgumentParser()
 parser.add_argument("-f","--inputfile", help="Specify the G-spinor basis set", required=True,
             type=str, default="aug-cc-pvtz.txt")
+parser.add_argument("--inputdir", help="Specify the main directory for the G-spinor basis set", required=False,
+            type=str, default="./")
+parser.add_argument("-An","--automatic_genAn", help="Specify the n integer in the automatic algorithm fitting basiis set generation 2 (default) 3  4 ", required=True,
+            type=int, default=2)
+parser.add_argument("--add_diffuse", help="Specify add an extra exponent in the series (default)", required=False, default=False, action="store_true")
+
 
 
 args = parser.parse_args()
@@ -20,17 +26,22 @@ print(args)
 print("")
 print("")
 
+inputdir = args.inputdir
+
 gspinorbasis = args.inputfile
+n = args.automatic_genAn
 
 print(args.inputfile)
+print(args.automatic_genAn)
 print(gspinorbasis)
+filebasis = inputdir+gspinorbasis
 
-if not os.path.isfile(gspinorbasis):
-    print("File ", gspinorbasis, " does not exist")
+if not os.path.isfile(filebasis):
+    print("File ", filebasis, " does not exist")
     exit(1)
 
 
-with open(gspinorbasis,"r") as fp:
+with open(filebasis,"r") as fp:
     Lines = fp.readlines()    
     count = 0
     maxl = int(Lines[count])
@@ -51,7 +62,6 @@ print(*explist)
 arr = np.array(explist)
 print(arr)
 
-n = 4 
 bmax = np.max(arr)
 bmin = np.min(arr) 
 print(bmax,bmin)
@@ -74,12 +84,38 @@ beta.append(b2)
 
 bn = b2
 
-for i in range(N-3):
-   bn = bn/(6-n)
-   beta.append(bn) 
+if args.add_diffuse:	
+   for i in range(N-2):
+      bn = bn/(6-n)
+      beta.append(bn) 
 
-outep = open(gspinorbasis+"GENA"+str(n), "w")
-outep.write ("%4i \n"%N)
-for i in range(N-1):
-     outep.write ("%10.5f 2 \n"%beta[i])
+      filefittingbasis = gspinorbasis[:-4]+"_autoGENA"+str(n)+"spd+.txt"
+      outep = open(filefittingbasis, "w")
+      outep.write ("%4i \n"%(N+1))
+   for i in range(N+1):
+        outep.write ("%10.5f 2 \n"%beta[i])
+     
+   outep.write ("# File generated from repository" +filebasis)
+   outep.write ("\n")
+   outep.write ("# using the Demon Style see the Demon Manual \n")
+   outep.write ("# koster et al. \n")
+   outep.write ("# One diffuse function has been added \n")
+
+
+if not args.add_diffuse:    
+   for i in range(N-3):
+      bn = bn/(6-n)
+      beta.append(bn)
+
+      filefittingbasis = gspinorbasis[:-4]+"_autoGENA"+str(n)+"spd.txt"
+      outep = open(filefittingbasis, "w")
+      outep.write ("%4i \n"%(N))
+   for i in range(N):
+        outep.write ("%10.5f 2 \n"%beta[i])
+
+   outep.write ("# File generated from repository" +filebasis)
+   outep.write ("\n")
+   outep.write ("# using the Demon Style see the Demon Manual \n")
+   outep.write ("# koster et al. \n")
+   print(beta)
 
