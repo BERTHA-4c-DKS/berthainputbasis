@@ -1,3 +1,23 @@
+def setang(angtype):
+
+   angpart =[]
+   if angtype == 's':
+       sectors = 1
+       angpart.append(0)
+       angpart = [0 for x in range(N+1)]
+   if angtype == 'spd':
+       angpart0 = [0 for x in range(1)]
+       angpart2 = [2 for x in range(1,N+1)]
+       angpart = angpart0 + angpart2
+
+   if angtype == 'spdfg':
+       angpart0 = [0 for x in range(1)]
+       angpart2 = [2 for x in range(1,int((N+1)*2/3))]
+       angpart4 = [4 for x in range(int((N+1)*2/3),N+1)]
+       angpart = angpart0 + angpart2 +angpart4
+   return angpart
+
+
 import argparse 
 import os 
 import sys
@@ -17,6 +37,7 @@ parser.add_argument("--inputdir", help="Specify the main directory for the G-spi
 parser.add_argument("-An","--automatic_genAn", help="Specify the n integer in the automatic algorithm fitting basiis set generation 2 (default) 3  4 ", required=True,
             type=int, default=2)
 parser.add_argument("--add_diffuse", help="Specify add an extra exponent in the series (default)", required=False, default=False, action="store_true")
+parser.add_argument("--ang_part", help="Specify the angural part set s (all s type), spd (s on larger exp and then d type), spdfg (g on smaller exponets)", required=False, type=str, default="s")
 
 
 
@@ -30,6 +51,7 @@ inputdir = args.inputdir
 
 gspinorbasis = args.inputfile
 n = args.automatic_genAn
+angtype = args.ang_part
 
 print(args.inputfile)
 print(args.automatic_genAn)
@@ -89,11 +111,31 @@ if args.add_diffuse:
       bn = bn/(6-n)
       beta.append(bn) 
 
-      filefittingbasis = gspinorbasis[:-4]+"_autoGENA"+str(n)+"spd+.txt"
+      filefittingbasis = gspinorbasis[:-4]+"_autoGENA"+str(n)+angtype+"+.txt"
+      
       outep = open(filefittingbasis, "w")
       outep.write ("%4i \n"%(N+1))
+
+#   angpart =[] 
+#   if angtype == 's':
+#       sectors = 1
+#       angpart.append(0)
+#       angpart = [0 for x in range(N+1)]
+#   if angtype == 'spd':
+#       angpart0 = [0 for x in range(1)]
+#       angpart2 = [2 for x in range(1,N+1)]
+#       angpart = angpart0 + angpart2 
+#
+#   if angtype == 'spdfg':
+#       angpart0 = [0 for x in range(1)]
+#       angpart2 = [2 for x in range(1,int((N+1)*2/3))]
+#       angpart4 = [4 for x in range(int((N+1)*2/3),N+1)]
+#       angpart = angpart0 + angpart2 +angpart4
+
+   angpart = setang(angtype)   
+
    for i in range(N+1):
-        outep.write ("%10.5f 2 \n"%beta[i])
+        outep.write ("%10.5f %i \n"%(beta[i],angpart[i]))
      
    outep.write ("# File generated from repository" +filebasis)
    outep.write ("\n")
@@ -107,15 +149,18 @@ if not args.add_diffuse:
       bn = bn/(6-n)
       beta.append(bn)
 
-      filefittingbasis = gspinorbasis[:-4]+"_autoGENA"+str(n)+"spd.txt"
-      outep = open(filefittingbasis, "w")
-      outep.write ("%4i \n"%(N))
+   filefittingbasis = gspinorbasis[:-4]+"_autoGENA"+str(n)+angtype+".txt"
+   print(filefittingbasis)
+   outep = open(filefittingbasis, "w")
+   outep.write ("%4i \n"%(N))
+
+   angpart = setang(angtype)
+
    for i in range(N):
-        outep.write ("%10.5f 2 \n"%beta[i])
+        outep.write ("%10.5f %i \n"%(beta[i],angpart[i]))
 
    outep.write ("# File generated from repository" +filebasis)
    outep.write ("\n")
-   outep.write ("# using the Demon Style see the Demon Manual \n")
-   outep.write ("# koster et al. \n")
+   outep.write ("# using the Demon2K Style, see the Demon2K Manual \n")
+   outep.write ("# koster et al. https://doi.org/10.1063/1.2431643 \n")
    print(beta)
-
