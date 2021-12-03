@@ -1,0 +1,14 @@
+   9 
+4970.90560 0 
+6213.63200 2 
+1242.72640 2 
+ 310.68160 2 
+  77.67040 2 
+  19.41760 2 
+   4.85440 2 
+   1.21360 2 
+   0.30340 2 
+# File generated from repository../basis/cc-pvdz.txt
+# using the Demon Style see the Demon Manual 
+# koster et al. 
+# One diffuse function has been added 
