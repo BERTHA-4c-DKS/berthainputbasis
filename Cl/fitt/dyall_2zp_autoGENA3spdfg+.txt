@@ -1,0 +1,19 @@
+  14 
+175908.54088 0 
+263862.81132 2 
+58636.18029 2 
+19545.39343 2 
+6515.13114 2 
+2171.71038 2 
+ 723.90346 2 
+ 241.30115 2 
+  80.43372 2 
+  26.81124 4 
+   8.93708 4 
+   2.97903 4 
+   0.99301 4 
+   0.33100 4 
+# File generated from repository/home/belp/EMBEDDING/berthainputbasis/Cl/basis/dyall_2zp.txt
+# using the Demon Style see the Demon Manual 
+# koster et al. 
+# One diffuse function has been added 
