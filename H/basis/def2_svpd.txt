@@ -1,0 +1,13 @@
+1
+4
+     13.0107010        
+      1.9622572        
+      0.44453796       
+      0.12194962       
+2
+      0.8000000        
+      0.11704099050   
+# Version v0.9
+# https://www.basissetexchange.org
+#   Basis set: def2-SVPD
+# Description: def2-SVPD 
