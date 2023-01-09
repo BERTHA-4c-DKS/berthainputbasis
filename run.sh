@@ -25,7 +25,7 @@ python3 mergejsons.py
 
 export i=0
 
-for atom in Ag Au C Cl Cn Cu F Fl H Hg N Nh Og Pb Pt Rn Tl O At
+for atom in Ag Au C Cl Cn Cu F Fl H Hg N Nh Og Pb Pt Rn Tl O At Br I
 do
   for b in $(ls ./"$atom"/basis)
   do
