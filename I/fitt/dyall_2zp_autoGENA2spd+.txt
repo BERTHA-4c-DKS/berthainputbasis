@@ -1,0 +1,20 @@
+  15 
+15296184.17215 0 
+19120230.21519 2 
+3824046.04304 2 
+956011.51076 2 
+239002.87769 2 
+59750.71942 2 
+14937.67986 2 
+3734.41996 2 
+ 933.60499 2 
+ 233.40125 2 
+  58.35031 2 
+  14.58758 2 
+   3.64689 2 
+   0.91172 2 
+   0.22793 2 
+# File generated from repository/home/belp/WORKS/DyallSpinFree/berthainputbasis/I/basis/dyall_2zp.txt
+# using the Demon Style see the Demon Manual 
+# koster et al. 
+# One diffuse function has been added 

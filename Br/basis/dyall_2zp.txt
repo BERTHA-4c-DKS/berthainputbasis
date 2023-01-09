@@ -1,0 +1,60 @@
+3
+   15  
+    3.78958133E+06
+    4.47177995E+05
+    8.50617210E+04
+    2.09773970E+04
+    6.13808262E+03
+    2.02984561E+03
+    7.36219834E+02
+    2.87212821E+02
+    1.17667917E+02
+    3.76490147E+01
+    1.60686781E+01
+    4.95782770E+00
+    2.15077460E+00
+    4.35777194E-01
+    1.65871691E-01
+   11
+    8.22636816E+03
+    1.59529212E+03
+    4.65309949E+02
+    1.64692205E+02
+    6.50352075E+01
+    2.73373645E+01
+    1.16494781E+01
+    4.83745152E+00
+    1.96737053E+00
+    5.00650311E-01
+    1.50759924E-01
+    7
+    2.07075719E+02
+    6.09053896E+01
+    2.23455412E+01
+    9.01205758E+00
+    3.66355605E+00
+    1.43085343E+00
+    4.32158952E-01
+    1 
+    1.79715170E+00
+"""
+Dyall.2zp
+  REFERENCE
+$
+$ 1s-3s: K.G. Dyall, Theor. Chem. Acc. (2016) 135:128
+$ 4s-7s: K.G. Dyall, J. Phys. Chem. A. (2009) 113:12638.
+$ 2p-3p: K.G. Dyall, Theor. Chem. Acc. (2016) 135:128
+$ 4p-6p: K.G. Dyall, Theor. Chem. Acc. (1998) 99:366;
+$        revision K.G. Dyall, Theor. Chem. Acc. (2006) 115:441.
+$    7p: K.G. Dyall, Theor. Chem. Acc. (2012) 131:1172.
+$    3d: K.G. Dyall and A.S.P. Gomes, unpublished.
+$    4d: K.G. Dyall, Theor. Chem. Acc. (2007) 117:483.
+$    5d: K.G. Dyall, Theor. Chem. Acc. (2004) 112:403;
+$        revision K.G. Dyall and A.S.P. Gomes, Theor. Chem. Acc. (2009) 125:97.
+$    6d: K.G. Dyall, Theor. Chem. Acc. (2011) 129:603.
+$    4f: A.S.P. Gomes, K.G. Dyall and L. Visscher, Theor. Chem. Acc. (2010)
+$        127:369.
+$    5f: K.G. Dyall, Theor. Chem. Acc. (2007) 117:491.
+$ Available from the Dirac web site, http://dirac.chem.sdu.dk.
+$
+"""

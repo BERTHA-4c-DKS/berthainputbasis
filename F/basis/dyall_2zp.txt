@@ -1,0 +1,41 @@
+2
+   10    
+    2.08122193E+04
+    3.04524252E+03
+    6.82912687E+02
+    1.91245323E+02
+    6.15619638E+01
+    2.16954416E+01
+    8.03372746E+00
+    2.28806696E+00
+    8.91891561E-01
+    3.06490573E-01
+    6 
+    8.12382078E+01
+    1.87382214E+01
+    5.71665823E+00
+    1.95959041E+00
+    6.72331544E-01
+    2.17227007E-01
+    1 
+    1.61811961E+00
+"""
+Dyall 2zp
+$  REFERENCE
+$
+$ 1s-3s: K.G. Dyall, Theor. Chem. Acc. (2016) 135:128
+$ 4s-7s: K.G. Dyall, J. Phys. Chem. A. (2009) 113:12638.
+$ 2p-3p: K.G. Dyall, Theor. Chem. Acc. (2016) 135:128
+$ 4p-6p: K.G. Dyall, Theor. Chem. Acc. (1998) 99:366;
+$        revision K.G. Dyall, Theor. Chem. Acc. (2006) 115:441.
+$    7p: K.G. Dyall, Theor. Chem. Acc. (2012) 131:1172.
+$    3d: K.G. Dyall and A.S.P. Gomes, unpublished.
+$    4d: K.G. Dyall, Theor. Chem. Acc. (2007) 117:483.
+$    5d: K.G. Dyall, Theor. Chem. Acc. (2004) 112:403;
+$        revision K.G. Dyall and A.S.P. Gomes, Theor. Chem. Acc. (2009) 125:97.
+$    6d: K.G. Dyall, Theor. Chem. Acc. (2011) 129:603.
+$    4f: A.S.P. Gomes, K.G. Dyall and L. Visscher, Theor. Chem. Acc. (2010)
+$        127:369.
+$    5f: K.G. Dyall, Theor. Chem. Acc. (2007) 117:491.
+$ Available from the Dirac web site, http://dirac.chem.sdu.dk.
+"""

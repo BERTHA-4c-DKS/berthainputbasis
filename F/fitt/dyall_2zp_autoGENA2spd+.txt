@@ -1,0 +1,14 @@
+   9 
+7118.09457 0 
+8897.61821 2 
+1779.52364 2 
+ 444.88091 2 
+ 111.22023 2 
+  27.80506 2 
+   6.95126 2 
+   1.73782 2 
+   0.43445 2 
+# File generated from repository/home/belp/WORKS/DyallSpinFree/berthainputbasis/F/basis/dyall_2zp.txt
+# using the Demon Style see the Demon Manual 
+# koster et al. 
+# One diffuse function has been added 
