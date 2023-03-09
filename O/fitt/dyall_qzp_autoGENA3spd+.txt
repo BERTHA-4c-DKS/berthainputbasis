@@ -1,0 +1,16 @@
+  11 
+2319.74882 0 
+3479.62323 2 
+ 773.24961 2 
+ 257.74987 2 
+  85.91662 2 
+  28.63887 2 
+   9.54629 2 
+   3.18210 2 
+   1.06070 2 
+   0.35357 2 
+   0.11786 2 
+# File generated from repository/home/belp/BERTHAEDA/berthainputbasis/H/basis/dyall_qzp.txt
+# using the Demon Style see the Demon Manual 
+# koster et al. 
+# One diffuse function has been added 
