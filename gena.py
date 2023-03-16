@@ -71,7 +71,7 @@ with open(filebasis,"r") as fp:
     explist = []
 
     for i in range(maxl+1):
-            nexpl = int(Lines[count]) 
+            nexpl = int(Lines[count].split()[0]) 
             count = count + 1
             for j in range(nexpl):
                explist.append(float(Lines[count])) 

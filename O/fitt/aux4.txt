@@ -7,4 +7,4 @@
      3.800000000         4    
      1.080000000         4    
     0.3100000000         4    
-#dgauss-a2-dftjfit: alias AUX4
+#dgauss-a2-dftjfit: plus 2 on the angular momentum alias AUX4

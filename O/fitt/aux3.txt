@@ -8,3 +8,5 @@
      1.080000000         2    
     0.3100000000         2    
 #dgauss-a2-dftjfit: alias AUX3
+#https://www.basissetexchange.org/;
+#doi:10.1021/acs.jcim.9b00725

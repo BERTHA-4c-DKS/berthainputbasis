@@ -1,0 +1,12 @@
+   7 
+  48.31285 0 
+  60.39106 2 
+  12.07821 2 
+   3.01955 2 
+   0.75489 2 
+   0.18872 2 
+   0.04718 2 
+# File generated from repository/home/belp/BERTHAEDA/berthainputbasis/H/basis/dyall.aae2z.txt
+# using the Demon Style see the Demon Manual 
+# koster et al. 
+# One diffuse function has been added 
