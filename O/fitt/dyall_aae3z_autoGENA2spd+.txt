@@ -1,0 +1,17 @@
+  12 
+92041.74726 0 
+115052.18408 2 
+23010.43682 2 
+5752.60920 2 
+1438.15230 2 
+ 359.53808 2 
+  89.88452 2 
+  22.47113 2 
+   5.61778 2 
+   1.40445 2 
+   0.35111 2 
+   0.08778 2 
+# File generated from repository/home/belp/BERTHAEDA/berthainputbasis/O/basis/dyall.aae3z.txt
+# using the Demon Style see the Demon Manual 
+# koster et al. 
+# One diffuse function has been added 

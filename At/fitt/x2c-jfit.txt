@@ -1,0 +1,44 @@
+34
+31666585.53887367  0
+13459515.45504543  0
+5847457.03836339   0
+2596061.38987973   0
+1177505.21314550   0
+ 545492.28866086   0
+ 258022.75374663   0
+ 124573.02958387   0
+  61365.81844703   0
+  30831.29521136   0
+  15791.81259222   0
+   8242.23551261   0
+   4381.41131115   0
+   2370.86674885   0
+   1305.20076381   0
+    730.57047696   0
+    415.51209361   0
+    239.96541400   0
+    140.62041945   0
+     83.55241807   0
+     50.29696703   0
+     30.65091457   0
+     18.89281373   0
+     11.76848836   2
+      7.40154022   2
+      4.69564818   2
+      3.00209672   2
+      1.93233843   2
+      1.25093844   2
+      0.81365469   3
+      0.53118600   2
+      0.34769723   2
+      0.22795346   2
+      0.14952764   2
+#ADAPTED TO SOLVE SOME LINEAR DIPENDENCY PROBLEM:
+#Selected Basis Set: x2c-JFIT
+#Description: 	x2c coulomb fitting
+#Latest Version: 	1 (Data from Supporting info)
+#Last Update: 	November 5, 2020
+#Role: 	jfit
+#Family: 	ahlrichs_x2c
+#Function Types: 	gto, gto_spherical
+#https://www.basissetexchange.org/basis/x2c-jfit/format/dalton/?version=1&elements=85
