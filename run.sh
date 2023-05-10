@@ -2,7 +2,7 @@ rm fullsets.json
 
 export i=0
 
-for atom in Ag Au C Cl Cn Cu F Fl H Hg N Nh Og Pb Pt Rn Tl O At Br I W Cr Mo Sg
+for atom in Ag Au C Cl Cn Cu F Fl H Hg N Nh Og Pb Pt Rn Tl O At Br I W Cr Mo Sg Ts
 do
   echo $atom
   for b in $(ls ./"$atom"/basis)
@@ -25,7 +25,7 @@ python3 mergejsons.py
 
 export i=0
 
-for atom in Ag Au C Cl Cn Cu F Fl H Hg N Nh Og Pb Pt Rn Tl O At Br I W Cr Mo Sg
+for atom in Ag Au C Cl Cn Cu F Fl H Hg N Nh Og Pb Pt Rn Tl O At Br I W Cr Mo Sg Ts
 do
   for b in $(ls ./"$atom"/basis)
   do
