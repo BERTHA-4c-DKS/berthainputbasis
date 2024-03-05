@@ -7,14 +7,17 @@ do
   echo $atom
   for b in $(ls ./"$atom"/basis)
   do
-    name=$(echo "$b" | cut -f 1 -d '.')
+#    name=$(echo "$b" | cut -f 1 -d '.')
+    name=$(echo "$b" |  awk '{ print substr( $0, 1, length($0)-4)}')
+
     python3 txttojson.py -f ./"$atom"/basis/"$b" --atomname "$atom" --basisname "$name" --outfilename "$atom"_"$i".json
     i=$((i+1))
   done
 
   for b in $(ls ./"$atom"/fitt)
   do
-    name=$(echo "$b" | cut -f 1 -d '.')
+#    name=$(echo "$b" | cut -f 1 -d '.')
+    name=$(echo "$b" |  awk '{ print substr( $0, 1, length($0)-4)}')
     python3 txttojson.py -f ./"$atom"/fitt/"$b" -t --atomname "$atom" --basisname "$name" --outfilename "$atom"_"$i".json
     i=$((i+1))
   done
