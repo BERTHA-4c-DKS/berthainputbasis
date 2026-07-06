@@ -144,12 +144,12 @@ for atomic_number, element_info in basis_data['elements'].items():
 import json
 import glob
 
-read_files = glob.glob("*.json")
+read_files = glob.glob("*out.json")
 
 berthabset = {}
 berthabset["BasisFittSetBertha"] = []
 
-with open("merged_file.json", "w") as outfile:
+with open(basis_set_name+"_merged_file.json", "w") as outfile:
   for f in read_files:
     with open(f, "r") as infile:
       d = json.load(infile)
