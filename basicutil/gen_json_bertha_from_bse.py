@@ -135,7 +135,7 @@ for atomic_number, element_info in basis_data['elements'].items():
 
     comments='CIAO' 
 
-    atomic_name=bse.lut.element_sym_from_Z(atomic_number)
+    atomic_name=bse.lut.element_sym_from_Z(atomic_number).capitalize()
 
     a=convert_bertha_json(atomic_name,basis_data,comments,lmax, nl)
     print('a=',a)
