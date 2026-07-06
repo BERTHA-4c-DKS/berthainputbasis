@@ -1,12 +1,68 @@
 import json
 import basis_set_exchange as bse
+import argparse
+
+
+def convert_bertha_json(atomic_name,basis_data,comments='comment',lmax=0, nl=0):
+
+    tojson = {}
+    tojson["Atomname"]  = atomic_name 
+    tojson["Basisname"] = basis_data['name']
+
+    tojson["Comments"] = 'comments'
+
+    tojson["Dim"] = lmax
+    tojson["Header"] = []
+    tojson["Values"] = []
+
+    tojson["Header"] = nl
+    tojson["Values"] = [list(map(str, sublist)) for sublist in tab_value]
+
+    maindict = {}
+    maindict[atomic_name + "/" +basis_data['name']+ "/basisset"] = tojson
+
+    outfilename = basis_data['name']+"_"+"out.json"
+    out_file = open(atomic_name+"_"+outfilename, "w")
+    json.dump(maindict, out_file, indent = 4, sort_keys = False)
+    out_file.close()
+
+    return
+########################################
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument("-b","--basisset", \
+        help="Specify BSE basisset: defoult-->dyall-v2z", \
+        required=False, type=str, default="dyall-v2z")
+
+parser.add_argument("-b_av","--bse_av", \
+        help="Use this for see the avaiable basis set in BSE", \
+        type=bool, default=False)
+
+
+args = parser.parse_args()
+
+basis_set_name=args.basisset
+all_basis_sets = bse.get_all_basis_names()
+print(all_basis_sets) 
+
+#if basis_set_name not in all_basis_sets:
+#    print(basis_set_name+ " is not in BSE")
+#    print("use --bse_av")
+#    exit(1)
+#else:
+#    print(basis_set_name+ " is used.")
+#
+if args.bse_av:
+    print(f"Total basis sets available: {len(all_basis_sets)}")
+    print(all_basis_sets) 
 
 # 1. Fetch the raw python dictionary object
-basis_dict = bse.get_basis('cc-pVDZ', elements=[], uncontract_general=True, uncontract_spdf=True, uncontract_segmented=True )
-
+basis_dict = bse.get_basis(basis_set_name, elements=[], uncontract_general=True, uncontract_spdf=True, uncontract_segmented=True )
 # 2. Convert or save using python's built-in json tool
 # indent=4 makes it human-readable (pretty-printed)
 pretty_json = json.dumps(basis_dict, indent=4)
+
 
 with open("custom_basis.json", "w") as f:
     f.write(pretty_json)
@@ -77,28 +133,49 @@ for atomic_number, element_info in basis_data['elements'].items():
     print(tab_value)
     print(basis_data['name'])
 
-########################
+    comments='CIAO' 
 
-    tojson = {}
-    tojson["Atomname"]  = atomic_number
-    tojson["Basisname"] = basis_data['name'] 
+    atomic_name=bse.lut.element_sym_from_Z(atomic_number)
 
-    tojson["Comments"] = 'comments'
+    a=convert_bertha_json(atomic_name,basis_data,comments,lmax, nl)
+    print('a=',a)
 
-    tojson["Dim"] = lmax 
-    tojson["Header"] = []
-    tojson["Values"] = []
 
-    tojson["Header"] = nl
-    tojson["Values"] = [list(map(str, sublist)) for sublist in tab_value] 
+import json
+import glob
 
-    maindict = {}
-    maindict[atomic_number + "/" +basis_data['name']+ "/basisset"] = tojson
+read_files = glob.glob("*.json")
 
-    outfilename = 'out.json'
-    out_file = open(atomic_number+"_"+outfilename, "w")
-    json.dump(maindict, out_file, indent = 4, sort_keys = False)
-    out_file.close()
+berthabset = {}
+berthabset["BasisFittSetBertha"] = []
+
+with open("merged_file.json", "w") as outfile:
+  for f in read_files:
+    with open(f, "r") as infile:
+      d = json.load(infile)
+      berthabset["BasisFittSetBertha"].append(d)
+
+  json.dump(berthabset, outfile, indent = 4, sort_keys = False)
+
+import glob
+import os
+
+# 1. Find all files matching the pattern (e.g., all .json files)
+files_to_remove = glob.glob("*out.json")
+
+# 2. Loop through the list and delete each file
+for file_path in files_to_remove:
+    try:
+        os.remove(file_path)
+        print(f"Deleted: {file_path}")
+    except OSError as e:
+        print(f"Error deleting {file_path}: {e}")
+
+
+
+
+
+
 
 
 
