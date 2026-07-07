@@ -10,5 +10,5 @@ simple tool to generate json file for BERTHA from www.basissetexchange.org Basis
 
 How to use: python3 gen_json_bertha_from_bse.py -b dyall-v2z 
 
-Output --> ...json  to be used with 
+Output --> dyall-v2z_merged_file.json  to be used with 
 
