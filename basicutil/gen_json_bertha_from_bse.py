@@ -32,7 +32,7 @@ def convert_bertha_json(atomic_name,basis_data,comments='comment',lmax=0, nl=0):
 parser = argparse.ArgumentParser()
 
 parser.add_argument("-b","--basisset", \
-        help="Specify BSE basisset: defoult-->dyall-v2z", \
+        help="Specify BSE basisset: default--> dyall-v2z", \
         required=False, type=str, default="dyall-v2z")
 
 parser.add_argument("-b_av","--bse_av", \
