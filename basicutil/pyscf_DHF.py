@@ -17,6 +17,13 @@ parser.add_argument("--basisset", help="set basis set BSE", \
 
 args = parser.parse_args()
 
+with open(args.inputfile, 'r') as file:
+    # Collects the first word of every non-empty line
+    first_words = [line.split()[0] for line in file if line.split()]
+
+
+elements_in_molecule=first_words[2::]
+
 
 # 1. Define the molecule
 lib.param.LIGHT_SPEED=137.0359898000
@@ -25,14 +32,10 @@ mol= gto.Mole()
 mol.atom = args.inputfile
 mol.spin=0
 mol.unit='Bohr'
-#mol.charge=0
 mol.charge=int(args.totalcharge)
-mol.build()
 # 2. Programmatically build a custom basis dictionary using BSE's NWChem writer.
 # PySCF's `gto.load` function takes an NWChem format string and parses it perfectly.
-elements_in_molecule = [mol.atom_symbol(i) for i in range(mol.natm)]
 mol.nucmod = 'G'
-mol.build()
 print('Nuclear Model:',mol.nucmod)
 print('Atomic mass list:',mol.atom_mass_list())
 
