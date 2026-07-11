@@ -8,8 +8,20 @@ fnameinput='input.inp'
 #scelta generazione GEN-Xngen
 #ngen=int(input("Scegliere generazione (2-4) GEN-X: "))
 
-ngen=int(sys.argv[1])
-#MAXXL_deMon=6
+
+# Se manca l'argomento o chiedi aiuto, stampa le istruzioni ed esce
+if len(sys.argv) < 2 or sys.argv[1] in ["-h", "--help"]:
+    sys.exit("Uso: python script.py [X2|X3|X4]")
+
+# Mappa l'input al numero
+ngen = {"X2": 2, "X3": 3, "X4": 4}.get(sys.argv[1])
+
+# Se l'input non è nel dizionario (ngen è None), dà errore
+if not ngen:
+    sys.exit("Errore: input non valido. Usa solo X2, X3 o X4.")
+
+
+MAX_L=6
 
 
 print('ABF generate con GEN-X'+str(ngen), file=sys.stderr)
@@ -120,7 +132,7 @@ for icent in range (ncent):
   for set in range (n_alpha[icent]):              #loop su ogni esponente del set di base ausiliario
     L_set=0                                       #variabile per tenere traccia del momento angolare massimo per ogni esponente del set di base ausiliario
     for l in range (lmaxx[icent]+1):              #loop su ogni momento angolare del set di base principale
-      L=min(2*l,6)                                #il momento angolare massimo per ogni l è 2*l, ma non può superare 6
+      L=min(2*l,MAX_L)                                #il momento angolare massimo per ogni l è 2*l, ma non può superare 6
       alphamin=2*minmaxl[icent][2*l+1]/beta       #calcola l'esponente minimo per generare funzioni di momento angolare l
       alphamax=2*minmaxl[icent][2*l]*beta         #calcola l'esponente massimo per generare funzioni di momento angolare l
       if round(alphamin, 10) < round(alpha[icent], 10) < round(alphamax, 10):          #se l'esponente è compreso tra il minimo e il massimo del set di base principale, allora genero funzioni di momento angolare l
