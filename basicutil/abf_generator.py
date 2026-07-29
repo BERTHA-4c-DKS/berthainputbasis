@@ -24,7 +24,7 @@ if not ngen:
 MAX_L=6
 
 
-print('ABF generate con GEN-X'+str(ngen), file=sys.stderr)
+print('ABF generate con GEN-'+str(ngen), file=sys.stderr)
 
 exp=[]
 exp1=[]
