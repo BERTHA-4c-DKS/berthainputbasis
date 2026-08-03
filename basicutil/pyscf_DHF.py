@@ -35,7 +35,7 @@ mol.unit='Bohr'
 mol.charge=int(args.totalcharge)
 # 2. Programmatically build a custom basis dictionary using BSE's NWChem writer.
 # PySCF's `gto.load` function takes an NWChem format string and parses it perfectly.
-mol.nucmod = 'G'
+mol.nucmod ='1'
 print('Nuclear Model:',mol.nucmod)
 print('Atomic mass list:',mol.atom_mass_list())
 
@@ -50,6 +50,7 @@ for element in elements_in_molecule:
     custom_basis[element] = gto.load(nwchem_str, element)
 # 3. Assign the explicit custom basis dictionary and build the molecule
 mol.basis = custom_basis
+#mol.set_common_orig([0.0, 0.0, -7.05144896])
 mol.build()
 
 # 4. Verify that the uncontracted orbitals loaded correctly
@@ -71,10 +72,7 @@ print("-"*6 +" Final Report "+"-"*6)
 print(f"Relativistic Coulomb Energy (J):  {coulomb_energy:.6f} Hartree")
 print(f"Relativistic Exchange Energy (K): {exchange_energy:.6f} Hartree")
 print(f"\nFinal DHF Energy: {energy:.12f} Ha")
-dip_el = mf.dip_moment(mol, dm, unit='Debye')
-print("")
-print("")
-print(dip_el)
+
 pure_list = list(mol.atom_mass_list())
 print(pure_list)
 mass_dict = {str(i): str(float(mass)) for i, mass in enumerate(mol.atom_mass_list())}
@@ -83,3 +81,57 @@ print("atomic_masses_used written in atomic_masses_from_pyscf.json:")
 with open('atomic_masses_from_pyscf.json', 'w') as f:
     json.dump(mass_dict, f, indent=4)
 print("Basise set used:",args.basisset)
+
+
+# na2c is the number of 2-component spin-orbitals (2 * nao)
+n2c = mol.nao_2c()
+# 2. Large-Large (LL) Spinor Dipole Integrals: <µ_L| r |ν_L>
+# Keyword: 'int1e_r_spinor'
+# Output shape: (3, n2c, n2c) with complex values
+ll_dip = mol.intor_symmetric('int1e_r_spinor', comp=3)
+# 3. Small-Small (SS) Spinor Dipole Integrals: <µ_S| (σ·p) r (σ·p) |ν_S>
+# Keyword: 'int1e_sprsp_spinor'
+# Output shape: (3, n2c, n2c) with complex values
+ss_dip = mol.intor_symmetric('int1e_sprsp_spinor', comp=3)
+#print("Large-component dipole matrix shape:", ll_dip.shape)
+#print("Small-component dipole matrix shape:", ss_dip.shape)
+
+# Extract 4-C density matrix blocks
+dm_LL = dm[:n2c, :n2c]
+dm_SS = dm[n2c:, n2c:]
+
+c=lib.param.LIGHT_SPEED
+print(c)
+
+# Compute LL and SS electronic dipole contributions
+elec_dip_LL = -np.einsum('xij,ji->x', ll_dip, dm_LL).real
+elec_dip_SS = -np.einsum('xij,ji->x', ss_dip, dm_SS).real * (0.5 / c)**2
+AU_TO_DEBYE = 2.54174623
+
+# Total Electronic Dipole
+elec_dip_total_au = elec_dip_LL + elec_dip_SS
+
+#print("LL Contribution (au):", elec_dip_LL )
+#print("SS Contribution (au):", elec_dip_SS )
+#print("Total Electronic Dipole (a.u.):", elec_dip_total_au)
+
+# 4. Nuclear Dipole Vector
+charges = mol.atom_charges()
+coords = mol.atom_coords()
+nuc_dip = np.dot(charges, coords)
+print(" ")
+print("Nuclear  Dipole (au):     ", nuc_dip)
+print("Electric Dipole (au):     ", elec_dip_total_au)
+tot_dip=elec_dip_total_au+nuc_dip
+print("Total    Dipole (a.u.):   ", tot_dip)
+dip=np.sqrt(tot_dip@tot_dip)
+print(f"Total dipole moment (a.u)  : {dip:.5f}")
+print(f"Total dipole moment (Debye): {dip*AU_TO_DEBYE:.5f}")
+
+print("")
+print("For test:Non-relativistic RHF")
+# 1. Hartree-Fock (RHF)
+mf_hf = scf.RHF(mol).run()
+dip_hf = np.linalg.norm(mf_hf.dip_moment(unit='Debye', verbose=False))
+print(f"Non-reativistic:RHF:   {dip_hf:.4f} Debye")
+
