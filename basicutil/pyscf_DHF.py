@@ -56,6 +56,16 @@ mol.build()
 # 4. Verify that the uncontracted orbitals loaded correctly
 print(f"Number of Uncontracted Basis Functions: {mol.nao}")
 
+#
+pure_list = list(mol.atom_mass_list())
+print(pure_list)
+mass_dict = {str(i): str(float(mass)) for i, mass in enumerate(mol.atom_mass_list())}
+print(mass_dict)
+print("atomic_masses_used written in atomic_masses_from_pyscf.json:")
+with open('atomic_masses_from_pyscf.json', 'w') as f:
+    json.dump(mass_dict, f, indent=4)
+print("Basise set used:",args.basisset)
+
 mf = scf.DHF(mol)
 mf.verbose = 4
 total_iterations = mf.scf_summary.get('cycle', 0)
@@ -73,14 +83,14 @@ print(f"Relativistic Coulomb Energy (J):  {coulomb_energy:.6f} Hartree")
 print(f"Relativistic Exchange Energy (K): {exchange_energy:.6f} Hartree")
 print(f"\nFinal DHF Energy: {energy:.12f} Ha")
 
-pure_list = list(mol.atom_mass_list())
-print(pure_list)
-mass_dict = {str(i): str(float(mass)) for i, mass in enumerate(mol.atom_mass_list())}
-print(mass_dict)
-print("atomic_masses_used written in atomic_masses_from_pyscf.json:")
-with open('atomic_masses_from_pyscf.json', 'w') as f:
-    json.dump(mass_dict, f, indent=4)
-print("Basise set used:",args.basisset)
+#pure_list = list(mol.atom_mass_list())
+#print(pure_list)
+#mass_dict = {str(i): str(float(mass)) for i, mass in enumerate(mol.atom_mass_list())}
+#print(mass_dict)
+#print("atomic_masses_used written in atomic_masses_from_pyscf.json:")
+#with open('atomic_masses_from_pyscf.json', 'w') as f:
+#    json.dump(mass_dict, f, indent=4)
+#print("Basise set used:",args.basisset)
 
 
 # na2c is the number of 2-component spin-orbitals (2 * nao)
