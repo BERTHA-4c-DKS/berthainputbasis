@@ -115,14 +115,16 @@ if scelta.startswith("X"):
   # loop generazione l'esponente più grande e più piccolo
   for icent in range (ncent):
     n_alpha_temp=1
-  while alpha_up[icent]<2*overmax[icent]:
+    while alpha_up[icent]<2*overmax[icent]:
     #calcola l'esponente più grande del ABF e il numero di esponenti
-    alpha_up[icent]=alpha_up[icent]*beta
-    n_alpha_temp=n_alpha_temp+1
-  while alpha_down[icent]>2*overmin[icent]:
+        alpha_up[icent]=alpha_up[icent]*beta
+        n_alpha_temp=n_alpha_temp+1
+
+    while alpha_down[icent]>2*overmin[icent]:
     #calcola l'esponente più piccolo del ABF e il numero di esponenti
-    alpha_down[icent]=alpha_down[icent]/beta
-    n_alpha_temp=n_alpha_temp+1
+        alpha_down[icent]=alpha_down[icent]/beta
+        n_alpha_temp=n_alpha_temp+1
+
     n_alpha.append(n_alpha_temp)
 
 
