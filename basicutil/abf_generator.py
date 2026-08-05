@@ -2,9 +2,11 @@ import numpy as np
 import sys
 
 
+
 np.set_printoptions(formatter={'float': '{:.6f}'.format})
 fnameinput='input.inp'
 
+#scelta generazione GEN-Xngen
 #scelta generazione GEN-Xngen
 #ngen=int(input("Scegliere generazione (2-4) GEN-X: "))
 
