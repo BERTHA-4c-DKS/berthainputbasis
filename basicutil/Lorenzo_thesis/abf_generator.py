@@ -8,7 +8,7 @@ fnameinput='input.inp'
 
 # Se manca l'argomento o chiedi aiuto, stampa le istruzioni ed esce
 if len(sys.argv) < 2 or sys.argv[1] in ["-h", "--help"]:
-    sys.exit("Uso: python script.py X<numero> o Y<numero>\nEsempi: python script.py X2.0 o python script.py Y1.7\nConsigliato: X[2-4] e Y[1.5-2.5]")
+    sys.exit("Uso: python abf_generator.py X<numero> o Y<numero>\nEsempi: python abf_generator.py X2.0 o python abf_generator.py Y1.7\nConsigliato: X[2-4] e Y[1.5-2.5]")
 
 # uniforma scelta
 scelta = sys.argv[1].upper()
