@@ -427,7 +427,7 @@ def plot_basis(basi_atomi):
         fig, axes = plt.subplots(nrows=n_subplot, sharex=True, figsize=(12, 2.5 * n_subplot))
         if n_subplot == 1:
             axes = [axes]
-        fig.subplots_adjust(hspace=0.08)
+        fig.subplots_adjust(top=0.90, hspace=0.08)
         livelli_ordinati = sorted(list(basi_atomi[icent].keys()), reverse=True)
         for ax, L in zip(axes, livelli_ordinati):
             esponenti = basi_atomi[icent][L]
@@ -456,7 +456,7 @@ def plot_basis(basi_atomi):
         axes[-1].set_xlabel(r"$\ln(\alpha)$", fontsize=12, fontweight='bold')
 
         # Salvataggio plot per ogni atomo
-        fig.suptitle(f"Auxiliary basis set {scelta} - Atom {icent+1}", fontsize=14, fontweight='bold', y=1.02)
+        fig.suptitle(f"ABS GEN-{scelta} - Atom {icent+1}", fontsize=14, fontweight='bold', y=0.96)
         nome_file = f'atomo_{icent+1}_GEN{scelta}_plot.png'
         fig.savefig(nome_file, bbox_inches='tight', dpi=300)
         
